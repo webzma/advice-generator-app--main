@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+:root {
+  /* COLORS */
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: var(--dark-blue);
+}
+
+main {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+main .card {
+  background-color: var(--dark-grayish-blue);
+  width: 90%;
+  max-width: 500px;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+}
+
+main .card .card-info {
+  max-width: 400px;
+}
+
+main .card .card-info .card-info__title {
+  color: var(--neon-green);
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+main .card .card-info .card-info__copy {
+  color: var(--light-cyan);
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  padding-bottom: 30px;
+}
+
+main .card .icon-neon-container {
+  transform: translateY(55px);
+  background-color: var(--neon-green);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+}
+
+main .card .icon-neon-container:hover {
+  cursor: pointer;
+  background-color: hsl(150, 97%, 55%);
+  box-shadow: 0px 0px 30px 2px hsl(150, 100%, 55%);
+}
+
+main .card .icon-container .icon2 {
+  display: block;
+  width: 100%;
+}
+
+main .card .icon-container .icon {
+  display: none;
+  width: 100%;
+}
+
+@media (max-width: 544px) {
+  main .card .icon-container .icon {
+    display: block;
+  }
+  main .card .icon-container .icon2 {
+    display: none;
+  }
+}
